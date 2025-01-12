@@ -21,7 +21,7 @@ const Modal = ({ content, onClose }) => {
       <div
         style={{
           width: '400px',
-          padding: '20px',
+          padding: '20px', 
           backgroundColor: 'white',
           borderRadius: '10px',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
