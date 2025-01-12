@@ -1,0 +1,16 @@
+.header {
+  margin-top: 30px;
+  font-size: 30px;
+  padding-top: 5px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0; /* 위아래 여백 */
+  font-size: 15px; /* 글씨 크기 */
+  position: fixed;
+  bottom: 0px; /* 화면의 아래쪽에 고정 */
+  width: 100%; /* 화면 전체 폭 */
+}

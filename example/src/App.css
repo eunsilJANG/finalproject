@@ -1,0 +1,44 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.text-center {
+    text-align: center;
+}
+nav, main {
+    width: 80vw;
+    margin: 0 10vw;
+}
+nav.nav-body, nav.nav-link {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+nav.nav-body {
+    background-color: cadetblue;
+}
+nav.nav-body a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav.nav-body a:hover {
+    color: black;
+}
+nav.nav-link {
+    gap: 10px;
+    margin: 0;
+}
+nav.nav-link a {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+}
+nav.nav-link a:hover {
+    color: brown;
+}
