@@ -32,7 +32,7 @@ export-env {
       }
     }
 
-    let virtual_env = r#'C:\project\SeleniumBasic\venv'#
+    let virtual_env = r#'C:\project\finalproject\SeleniumBasic\venv'#
     let bin = r#'Scripts'#
 
     let is_windows = ($nu.os-info.family) == 'windows'
