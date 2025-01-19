@@ -12,7 +12,7 @@
 
 #<정리>
 # pip install virtualenv
-# python -m virtualenv venv
+# python -m virtualenv (python -m venv venv)
 # venv(폴더명)/Scripts/activate 
 # venv 폴더에 pip install selenium chromedriver_autoinstaller
 
