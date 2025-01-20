@@ -20,11 +20,11 @@ def extract_job_data(job_element, seen_job_ids):
         # 공고 데이터를 딕셔너리 형태로 반환
         return {
             "title": input_values[3],  # 공고 제목
-            "company": input_values[2],  # 회사 이름
+            "company_name": input_values[2],  # 회사 이름
             "location": job_element.find_element(By.CSS_SELECTOR, '.site').text,  # 공고 위치
             "salary": job_element.find_element(By.CSS_SELECTOR, '.b1_sb').text,  # 급여 정보
             "job_id": job_id,  # 고유 ID
-            "link": f"https://www.work.go.kr/empInfo/empInfoSrch/detail/empDetailAuthView.do?wantedAuthNo={job_id}",  # 상세 공고 링크
+            "url": f"https://www.work.go.kr/empInfo/empInfoSrch/detail/empDetailAuthView.do?wantedAuthNo={job_id}",  # 상세 공고 링크
         }
     except Exception as error:
         # 오류 발생 시 로그 출력

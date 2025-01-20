@@ -1,0 +1,493 @@
+<div class="careers-new">
+      <!-- border -->
+      <div class="border">
+        <div class="left">
+          <div class="tit-area">
+            <p class="tit">계명대학교 명교생활관 기간제 계약직원 채용공고</p>
+            <span class="d-day" id="dDayInfo">D-16</span>
+            
+            <script type="text/javascript">
+            $(document).ready(function(){
+
+              /**** D-day 구하기 ****/
+              var date  = '20250205';
+              var wantedYn = 'N';
+              var closeClcd = 'A';
+              var plcmtCnt = '0';
+              var offerCnt = '0';
+              var seekActvHistCnt = '0';
+              var callPage = '';
+                //var FORMAT = "-";
+
+                if (date.length != 8)
+                    return null;
+
+                var pageType = '';
+              if(closeClcd != 'A' && plcmtCnt < 1 && (pageType == null || pageType == "") && 'history' == callPage) {
+                $("#dDayInfo").text('마감');
+                return;
+              }
+
+              var infoOpenGrdYn  = 'Y';
+
+              if(infoOpenGrdYn == 'N' && (plcmtCnt > 0 && offerCnt > 0 || seekActvHistCnt > 0) && 'history' == callPage) {
+                $("#dDayInfo").text('마감/비공개');
+                return;
+              }
+
+                if(date.substring(0,4) == '2099'){
+                $("#dDayInfo").text('채용시까지');
+                    return;
+                }else if(wantedYn == 'Y'){
+                  $("#dDayInfo").html('채용시까지');
+                  return;
+                }
+
+                var arrDate0 = date.substring(0,4);
+                var arrDate1 = parseInt(date.substring(4,6))-1;
+                var arrDate2 = date.substring(6,8);
+
+                var now = new Date();
+
+                var from_dt = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                var to_dt = new Date(arrDate0, arrDate1, arrDate2);
+              var returnData = (to_dt.getTime() - from_dt.getTime()) / 1000 / 60 / 60 / 24;
+
+              if(returnData < 0 ){
+                $("#dDayInfo").text('접수마감');
+              }else if(returnData == 1){
+                $("#dDayInfo").text('D-'+returnData);
+              }else if(returnData == 0){
+                $("#dDayInfo").html('오늘접수마감');
+              }else{
+                $("#dDayInfo").text('D-'+returnData);
+              }
+
+            });
+          </script>
+          </div>
+
+          <!-- info -->
+          <div class="info">
+            <div class="column">
+              <p class="tit">지원자격</p>
+
+              <div class="cont">
+                <ul>
+                  <li>
+                    <strong>경력</strong>
+                   	<span>
+                    	관계없음
+	                 	
+                  
+                  
+                  	</span>
+                  </li>
+                  <li>
+                    <strong>학력</strong>
+                    <span>
+                    
+                      
+                          학력무관
+                      
+                      
+                  </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            
+              
+              
+              <!-- 도로명 주소 -->
+                  
+                
+                  
+                
+                  
+                
+              
+            
+            <div class="column">
+              <p class="tit">근무조건</p>
+
+              <div class="cont">
+                <ul>
+                  <li>
+                    <strong>지역</strong>
+                    <span>대구광역시   달서구  달구벌대로 1095  (신당동)</span>
+                  </li>
+                  <li>
+                    <strong>임금</strong>
+                    <span>
+                  월급
+                  
+                    
+                      209만원
+                    
+                    
+                  
+                  
+                  
+                    
+                      
+                        ~ 209만원
+                      
+                      
+                    
+                  
+                  </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--// info -->
+
+          <!-- info -->
+          <div class="info">
+            <div class="column">
+              <p class="tit">고용형태</p>
+              
+              
+                
+              
+              <div class="cont">
+                <ul>
+                  <li>
+                    <strong>고용형태</strong>
+                    <span>기간의 정함이 있는 근로계약	 </span>
+                  </li>
+                  <li>
+                    <strong>근무형태</strong>
+                    <span>
+                    	주 5일 근무
+                    	
+                    	
+                    		<span class="font-pink">(주 소정근로시간: 40시간)</span>
+                    	
+                    	
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="column">
+              <p class="tit">복리후생</p>
+              <div class="cont">
+                <ul>
+				
+                  <li class="full">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--// info -->
+        </div>
+        <!--// left -->
+
+        <div class="right">
+
+          <div class="logo-company">
+
+            <!-- 이미지 일때 -->
+            <div class="img">
+              
+                
+                
+                  <img id="logoImg" alt="등록된 사진이 없습니다" width="200" height="64" src="/images/common/none_imglogo.gif">
+                
+              
+            </div>
+            <!--// 이미지 일때 -->
+
+            <!-- 텍스트 일때 -->
+<!--
+            <div class="txt">
+              계명대학교 명교생활관 기간제 계약직원 채용공고
+            </div>
+-->
+            <!--// 텍스트 일때 -->
+
+          </div>
+
+          
+
+          <!-- info -->
+          <div class="info">
+            <ul>
+              <li>
+                <strong>기업명</strong>
+                <div>
+                  계명대학교명교생활관
+                </div>
+              </li>
+              <li>
+                <strong>업종</strong>
+                <div>
+                  대학교
+                </div>
+              </li>
+              <li>
+                <strong>기업규모</strong>
+                <div>
+                  
+                    &nbsp;
+                    
+                  
+                </div>
+              </li>
+              <li>
+                <strong>설립년도</strong>
+                <div>
+                  
+                    &nbsp;
+                    
+                  
+                </div>
+              </li>
+              <li>
+                <strong>연매출액</strong>
+                <div>
+                  
+                  &nbsp;
+                  
+                  
+                </div>
+              </li>
+              <li>
+                <strong>홈페이지</strong>
+                <div>
+                  
+                    -
+                  
+                  
+                </div>
+              </li>
+              
+              <li>
+                <strong>근로자수</strong>
+                <div>30 명</div>
+              </li>
+              
+            </ul>
+          </div>
+          <!--// info -->
+
+          <div class="btn" style="font-size:12px; ">
+			<a href="#none" onclick="f_companyInfoPop()" title="새창 열림" class="button mg00 pd00">채용정보이력</a>
+			<button type="button" onclick="f_interestCompany();" class="button mg00 pd00-05"><i id="interestCompanyId" class="iconset ico-heart-off fav-com" title="관심기업 등록 전 상태"></i> 관심기업등록</button>
+			<button type="button" onclick="f_blockCompany();" class="button mg00 pd00"><i id="blockCompanyId" class="iconset ico-prohibit-gray block-com" title="열람차단 기업 등록 전 상태"></i> 열람차단</button>
+		  </div>
+
+        </div>
+      </div>
+      <!--// border -->
+
+      <div class="a-r mt05">
+        <strong class="font-black">정보제공처</strong> :
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          []
+        
+    </div>
+    <a href="/indivMemberSrv/theWork/retrieveTheWorkInfo.do" class="block mt15"><img src="/static/images/careers/ban-ai-recomend.png" class="block" alt="나에게 딱 맞는 일자리 어렵게 찾지 말고 AI일자리추천으로 추천받고 취업하세요~ 바로가기"></a><!-- 20240816 추가-->
+      <div class="btn-group center scrap-group">
+        <!-- <button type="button" class="button navy" onclick="f_bookMarkAdd();"><i class="iconset ico-star-white"></i> 스크랩</button> -->
+
+        
+        
+        
+        
+          
+          
+          
+            
+              
+              
+                
+                  
+                  
+                    <button type="button" class="button blue disabled" onclick="javascript:alert('고용24 입사지원을 지원하지 않는 채용공고입니다.\n채용정보 내용 중 접수방법을 확인하시기 바랍니다.');"><i class="iconset ico-email-white"></i> 고용24 입사지원 불가능</button>
+                  
+                
+              
+              
+              
+            
+          
+          
+   
+          
+		      
+		      
+			      
+				      
+					      
+						      
+							      
+						      
+					      
+				      
+			      
+		      
+	      
+        
+        
+        
+
+      </div>
+		<div class="relative" id="plcmtAplentListPop" style="display:none;">
+			<div class="layer-frame layer-wrap" style="position:absolute; top:-500px; left:50%; width:720px; transform:translateX(-50%); z-index:20">
+				<div class="popup">
+					<div class="pop-header layer-drag">
+						<strong class="h1">알선/입사지원 이력 재확인</strong>
+					</div>
+					<div class="pop-container">
+						<div class="box-white v2 a-c">
+							<strong class="block sub-title-20"><span class="font-blue10">계명대학교명교생활관</span>에 알선/입사지원 이력이 존재합니다.<br>입사지원 하시겠습니까?</strong>
+							<div class="btn-group center">
+								<button type="button" class="button navy w90px" onclick="f_plcmtAplentListPop(0)">아니오</button>
+								<button type="button" class="button blue w90px" onclick="f_plcmtAplentListPop(1)">예</button>
+							</div>
+						</div>
+						<div class="box-bluegray v1 pd20">
+							<strong class="inline-block tit-check-cir">확인하세요!</strong>
+							<span class="font-red pl10">※ 최대 3년 이내의 알선/입사지원 이력만 존재합니다.</span>
+						</div>
+
+						<!-- 알선이력 -->
+						<div class="box-bluegray v1 pd20" style="margin-top:1px">
+							<div class="relative mb10">
+								<strong class="sub-title-20 bul">알선 이력</strong>
+								<span class="font-size-20px">(<strong class="font-lblue">0</strong>건)</span>
+								<span class="more-area"><a onclick="fnplcmtHistPopup('/indivMemberSrv/aplentMng/aplentHist/plcmtHistList.do'); return false;" href="javascript:void(0);" target="_blank" title="새창">전체보기<i class="icon"></i></a></span>
+							</div>
+
+							<div class="table-wrap" style="max-height:168px; overflow-y:auto">
+								<table class="board-list">
+									<caption>알선일, 채용제목/모집내용, 관할고용센터(담당자), 처리결과 항목으로 구성</caption>
+									<colgroup>
+										<col style="width:16%">
+										<col>
+										<col style="width:30%">
+										<col style="width:13%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">알선일</th>
+											<th scope="col">채용제목 / 모집내용</th>
+											<th scope="col">관할고용센터<span class="font-normal">(담당자)</span></th>
+											<th scope="col">처리결과</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										
+											<tr>
+												<td class="bg-white" colspan="4">
+													알선  이력이 없습니다.
+												</td>
+											</tr>
+										
+									</tbody>
+								</table>
+							</div>
+							<!-- //알선이력 -->
+
+							<!-- 입사지원 이력 -->
+							<div class="relative mt30 mb10">
+								<strong class="sub-title-20 bul">입사지원 이력</strong>
+								<span class="font-size-20px">(<strong class="font-lblue">0</strong>건)</span>
+								<span class="more-area"><a onclick="fnplcmtHistPopup('/indivMemberSrv/aplentMng/aplentHist/emailAplentHistList.do'); return false;" href="javascript:void(0);" target="_blank" title="새창 열림">전체보기<i class="icon"></i></a></span>
+							</div>
+							<div class="table-wrap" style="height:172px; overflow-y:auto">
+								<table class="board-list">
+									<caption>지원일, 채용제목/모집내용, 지원결과 항목으로 구성</caption>
+									<colgroup>
+										<col style="width:16%">
+										<col>
+										<col style="width:15%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">지원일</th>
+											<th scope="col">채용제목 / 모집내용</th>
+											<th scope="col">
+												지원결과
+												<div class="tooltip">
+													<a href="#layerTool_01" class="tooltip"><i class="iconset ico-tooltip">툴팁</i></a>
+													<div id="layerTool_01" class="layer-tooltip w595px" style="left:-575px">
+														<ul>
+															<li class="font-normal"><strong class="font-black">미처리</strong> : 기업에서 채용결과 처리를 하지 않은 상태입니다.</li>
+															<li class="font-normal"><strong class="font-black">채용</strong> : 기업에서 채용을 확정한 상태입니다.</li>
+															<li class="font-normal"><strong class="font-black">채용예정</strong> : 기업에서 근로를 개시하기 전에 지원자에게 채용을 확정하여 통보한 상태입니다.</li>
+															<li class="font-normal"><strong class="font-black">미채용</strong> : 기업에서 지원자를 채용하지 않은 상태입니다.</li>
+														
+													</ul></div>
+												</div>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										
+											<tr>
+												<td class="bg-white" colspan="3">
+													입사지원 이력이 없습니다.
+												</td>
+											</tr>
+										
+									</tbody>
+								</table>
+							</div>
+							<!-- //입사지원 이력 -->
+						</div>
+					</div>
+
+					<button type="button" class="btn-close-popup" onclick="f_plcmtAplentListPop(0)">팝업창 닫기</button>
+				</div>
+			</div>
+		</div>
+    </div>

@@ -5,7 +5,7 @@ import chromedriver_autoinstaller
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-def crawl_jobs(search_query, output_file="jobs.json"):
+def crawl_jobs(search_query, output_file="indeed.json"):
     """검색어를 기반으로 Indeed 채용공고를 크롤링합니다."""
 
     # 크롬 드라이버를 자동으로 설치하거나 이미 설치된 버전을 사용합니다.
@@ -105,11 +105,11 @@ def extract_job_details(job_element, seen_job_ids):
         # 공고 데이터를 딕셔너리 형태로 반환
         return {
             "title": job_link_element.find_element(By.CSS_SELECTOR, 'span').get_attribute('title'),
-            "company": location_element.find_element(By.CSS_SELECTOR, '.css-1h7lukg.eu4oa1w0').text,
+            "company_name": location_element.find_element(By.CSS_SELECTOR, '.css-1h7lukg.eu4oa1w0').text,
             "location": location_element.find_element(By.CSS_SELECTOR, '.css-1restlb.eu4oa1w0').text,
             "salary": extract_salary(job_element),
             "job_id": job_id,
-            "link": f"https://kr.indeed.com/viewjob?jk={job_id}",
+            "url": f"https://kr.indeed.com/viewjob?jk={job_id}",
         }
     except Exception as error:
         # 데이터가 없거나 오류 발생 시 None 반환
