@@ -102,4 +102,4 @@ def crawl_jobs(search_query, output_file="jobs.json"):
 if __name__ == "__main__":
     # "고령자" 검색어로 크롤링 수행
     # 결과는 'work24.json' 파일로 저장됩니다.
-    crawl_jobs("고령자", "work24.json")
+    crawl_jobs("고령자", "work2424.json")

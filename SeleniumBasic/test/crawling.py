@@ -8,9 +8,14 @@ from selenium.webdriver.support import expected_conditions as EC
 def extract_work24_job_data(job_element, seen_job_ids):
     """Work24 채용 공고 데이터를 추출."""
     try:
-        # 공고 데이터를 포함한 input 요소의 value 속성을 추출
-        # value는 '|'로 구분된 문자열이며, 이를 분리하여 필요한 데이터를 가져옵니다.
-        input_values = job_element.find_element(By.CSS_SELECTOR, 'input').get_attribute('value').split('|')
+        # 공고 데이터를 포함한 input 요소 확인 및 추출
+        input_element = job_element.find_elements(By.CSS_SELECTOR, 'input')
+        if not input_element:
+            print("Input element not found, skipping this job.")
+            return None
+
+        # value 속성을 가져와 공고 데이터를 분리
+        input_values = input_element[0].get_attribute('value').split('|')
         job_id = input_values[0]  # 공고의 고유 ID
 
         # 이미 처리된 공고 ID는 중복 방지
