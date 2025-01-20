@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import App from './App';
+import JobPostingDetail from './components/JobPostingDetail';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './assets/css/main.css';
@@ -14,6 +15,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/job-posting/:id" element={<JobPostingDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>

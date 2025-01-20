@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './page/Modal';
+import { Routes, Route } from 'react-router-dom';
+import JobPostingDetail from './components/JobPostingDetail';
 
 const Home = () => {
   const [cards, setCards] = useState([]); // 전체 공고 데이터
@@ -185,4 +187,15 @@ const Home = () => {
   );
 };
 
-export default Home;
+function App() {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/job-posting/:id" element={<JobPostingDetail />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
