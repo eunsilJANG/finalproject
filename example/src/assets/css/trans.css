@@ -1,0 +1,118 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.converter-container {
+  display: flex;
+  flex-direction: row; /* Align input and output sections horizontally */
+  gap: 20px;
+  width: 70%; /* Occupies 90% of the available space */
+  height: 60%; /* Added height for better vertical alignment */
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-section,
+.output-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  height: 90%; /* Match the height of the converter-container */
+  padding: 30px;
+  margin: 10px;
+}
+
+.input-box,
+.output-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%; /* Stretch to fill the section height */
+  background-color: #f9f9f9;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-textarea,
+.output-textarea {
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+.convert-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.style-select {
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.output-textarea {
+  background-color: #ffffff;
+}
+
+.output-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.audio-button,
+.copy-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sound-image {
+  max-width: 10%;
+  height: auto;
+}
+
+.copy-image {
+  max-width: 10%;
+  height: auto;
+}
+
+.image-container {
+  display: flex;
+  gap: 10px; /* 이미지 사이에 간격 추가 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+.sound-image,
+.copy-image {
+  width: 50px; /* 원하는 크기 설정 */
+  height: auto; /* 비율에 맞게 자동 조정 */
+  cursor: pointer; /* 클릭 시 커서 변경 */
+}

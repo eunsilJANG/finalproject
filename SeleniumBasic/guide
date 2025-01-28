@@ -1,0 +1,48 @@
+# 1. pip install virtualenv 가상환경 설치
+
+# 2. cd test_folder(project)
+
+# 3. folder(폴더명)/Scripts/activate - 가상환경 활성화
+# 3. deactivate              - 가상환경 비활성화
+
+# 4. Unacthorized Access 에러가 발생 -> powershell  -> set-executionpolicy unrestricted
+
+# Selenium = 크롬 창을 코드로 제어하는 것
+# 화면에서 보이는 모든걸 COntrol 할 수 있음
+
+#<정리>
+# pip install virtualenv
+# python -m virtualenv (python -m venv venv)
+# venv(폴더명)/Scripts/activate 
+# venv 폴더에 pip install selenium chromedriver_autoinstaller
+
+
+# -------------------------------------------------------------------------------------------
+# import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# import chromedriver_autoinstaller
+
+# chromedriver_autoinstaller.install() # 크롬 버전에 맞게 chromedriver 다운
+
+# driver = webdriver.Chrome()
+# # 1. 웹 브라우저 주소창을 컨트롤하기 driver.get 
+# driver.get("https://www.naver.com")
+# time.sleep(3)
+# driver.current_url
+
+# #2-1 요소를 찾아서 Copy 해옴. 실제 웹 브라우저 + 개발자 도구
+# 엘리먼트_셀렉터 ="#newsstand > div.ContentHeaderView-module__content_header___nSgPg > div > ul"
+
+# #2-2. 찾아온 요소를 find_element로 가져오기 -> 상자(변수)에 담기
+# 콘텐트헤더 = driver.find_element(By.CSS_SELECTOR, 엘리먼트_셀렉터)
+
+# #3-1 데이터를 가져오기3
+# print(콘텐트헤더.text)
+
+# #3-2 요소를 클릭하기[액션]
+# 콘텐트헤더.click()
+
+# input()
+
+# ------------------------------------------------------------------------------------------------

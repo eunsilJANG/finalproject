@@ -1,0 +1,23 @@
+.swipe-left {
+  transform: translateX(-100vw);
+  transition: transform 0.5s ease-in-out;
+}
+
+.swipe-right {
+  transform: translateX(100vw);
+  transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .swipeable-card {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+@media (min-width: 769px) {
+  .swipeable-card {
+    width: 300px;
+    height: 500px;
+  }
+}
